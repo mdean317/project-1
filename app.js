@@ -8,6 +8,8 @@ const bookCoversArray = [
 /*-------------------------------- Variables --------------------------------*/
 let currentHat = "";
 let currentBookCover = 0;
+let ytPlayer;
+
 
 /*------------------------ Cached Element References ------------------------*/
 
@@ -24,10 +26,10 @@ const mainTitle = document.querySelector('#mainTitle');
 const resumeDisplay = document.querySelector('#resume-display');
 const speakerReel = document.querySelector('#speaker-reel');
 const bookCover = document.querySelector('#bookCover');
-let ytPlayer;
 
 // Init main area
 mainContainer.innerHTML = "";
+
 
 /* Aside section elements */ 
 const asideContainer = document.querySelector('.aside-container');
@@ -317,4 +319,13 @@ const changeToAuthor = () => {
 
     // Adjust global profession variable 
     currentHat = dropDownAuthor.id;
+}
+
+function onYouTubeIframeAPIReady() {
+    ytPlayer = new YT.Player('', {
+        playerVars: {
+            'autoplay': 1,
+            'controls': 1
+        },
+    });
 }
