@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="./app.js"></script>
+    <link rel="stylesheet" href="./style.css" />
+    <title>Dean Movshovitz</title>
+</head>
+<body>
+  <script src="https://www.youtube.com/iframe_api"></script>
+  <nav>
+    <div class="nav-main">
+      <img src="./Website Logo.png" id="logo">
+      <img>
+      <br>
+      <h1>&nbsp; Software Engineer. &nbsp; Speaker. &nbsp; Author. &nbsp; </h1>
+      <div class="dropdown">
+        <button class="dropbtn">Pick the Dean You Want! &darr;
+        </button>
+        <div id="myDropdown" class="dropdown-content">
+          <span id="software-engineer">Software Engineer</span>
+          <span id="speaker">Speaker</span>
+          <span id="author">Author</span>
+        </div> 
+      </div>
+    </div>
+  </nav>
+   <main>
+    <br>
+    <div>
+      <span id="mainTitle">...</span>
+      <br>
+      <div class="container">
+        <embed id='resume-display' src="./Resume.pdf#zoom=80&navpanes=0" 
+             type="application/pdf">  
+        <!--<iframe id='speaker-reel' controls src="https://youtu.be/9HFQ9VjkCm0" type="video/mp4">
+          Your browser does not support the video tag.
+        </iframe> -->
+        <iframe id='speaker-reel' width="560" height="315" src="https://www.youtube.com/embed/9HFQ9VjkCm0?si=5ngjmaN9wztFpPnu"
+        title="YouTube video player" frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" enablejsapi=1
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <img id="bookCover" src="./Pixar Cover.jpg">
+      </div>
+    </div>
+   </main>
+   <aside class="aside-container">
+    <div id="prog-aside">
+      <h2>Fluent in:</h2>
+      <h4>CSS-ish</h4>
+      <h4>CSS</h4>
+      <h4>HTML</h4>
+      <h4>JAVASCRIPT</h4>
+      <h4>SQL</h4>
+      <h4>REACT (soon)</h4>
+      <h4>EXPRESS (soon)</h4>
+      <h4>PYTHON (soon)</h4>
+    </div>
+    <div id="author-aside">
+        <h2 id="also">Also available in:</h2>
+        <img src="./Korean.png" id="showingBookCover">
+        <br>
+        <div id="arrows">
+          <h2 id="language">Russian</h2>
+          <br>
+          <span><button class="accordion-arrow" id="left-arrow">&larr;</button></span>
+          <span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span>
+          <span><button class="accordion-arrow" id="right-arrow">&rarr;</button></span>
+        </div>
+    </div>
+   </aside>
+   <footer> 
+      <div class="footer-main">
+        <button class="ftrbutton" id="progModalBtn">Hire me as a Programmer!</button>
+          <div id="progModal" class="modal">
+            <div class="modal-content">
+              <span class="close" id="progModalCloseBtn">&times;</span>
+              <p>Hire me as a Programmer!</p>
+            </div>
+          </div>
+        <button class="ftrbutton" id="speakModalBtn">Book me to speak!</button>
+        <div id="speakModal" class="modal">
+          <div class="modal-content">
+            <span class="close" id="speakModalCloseBtn">&times;</span>
+            <p>Book me to speak!</p>
+          </div>
+        </div>
+        <button class="ftrbutton" id="writeModalBtn">Pay me to write!</button>
+        <div id="writeModal" class="modal">
+          <div class="modal-content">
+            <span class="close" id="writeModalCloseBtn">&times;</span>
+            <p>Pay me to write!</p>
+          </div>
+        </div>     
+      </div>
+    </footer>
+</body>
+</html>

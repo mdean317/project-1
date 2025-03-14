@@ -1,0 +1,255 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body {
+  display: grid;
+  background-color: lightgray;
+  margin: 0;
+  padding: 0;
+  grid-template-rows: 2fr 8fr 1fr; 
+  grid-template-columns: 3fr 1fr; 
+}
+
+nav {
+  background-color: #38b18a;
+  grid-column: span 2;
+  display: grid;
+  grid-template-columns: 2fr 1fr; 
+}
+
+main {
+  background-color: #92d97c;
+  display: flex;
+  justify-content: center; 
+}
+
+aside {
+  background-color: #f9f871;
+  display: flex;
+  justify-content: center; 
+}
+
+footer {
+  background-color: #72a8ff;
+  grid-column: span 2;
+  display: grid;
+  grid-template-columns: 2fr 1fr; 
+}
+
+.footer-main {
+  background-color: #72a8ff;
+  grid-column: span 1;
+  display: flex;
+}
+
+/* Set up nav elements */
+#logo {
+  margin-top: 20px;
+  display: inline-block;
+}
+
+h1 {
+  background-color: #f9f871;
+  display: inline-block;
+  margin-top: 20px;
+  height: 30px;
+}
+
+/* set up profession dropdown */
+.dropdown {
+  display: inline-block;
+}
+
+.dropbtn {
+  background-color: aquamarine;
+  color: rgb(0, 0, 0);
+  font-size: 18px;
+  font-weight: bolder;
+  font-family: 'Times New Roman', Times, serif;
+  border: none;
+  cursor: pointer;
+  height: 30px;
+  min-width: 160px;
+  text-align: left;
+  box-shadow: 0px 8px 16px 0px rgb(41, 87, 72);
+  margin: 0 auto;
+  display: block;
+  font-size: larger;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+background-color:rgb(200, 255, 237);
+}
+
+.dropdown-content {
+display: none;
+position: absolute;
+background-color: rgb(200, 255, 237);
+min-width: 160px;
+box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+z-index: 1;
+}
+
+.dropdown-content span {
+padding: 12px 16px;
+display: block;
+}
+
+.dropdown-content span:hover {background-color: aquamarine;}
+
+/* Set up Main elements */
+.container {
+  overflow: visible;
+  display: flex;
+  justify-content: center; 
+  width: 600px;
+  height: 80%;
+}
+
+#mainTitle {
+  background-color: aquamarine;
+  box-shadow: 0px 8px 16px 0px rgb(41, 87, 72);
+  margin: 0 auto;
+  margin-top: 5px;
+  padding: 1% 5%;
+  display: block;
+  font-size: larger;
+  width: fit-content;
+  text-align: center;
+  font-weight: bolder;
+}
+
+#resume-display{
+  position: relative;
+  top: 0;
+  height: 100%; 
+  aspect-ratio: 1 / 1;
+  overflow: auto; 
+}
+
+#bookCover {
+  position: relative;
+  top: 0;
+  overflow: auto; 
+  height: 80%;
+}
+
+#speaker-reel {
+  position: relative;
+  top: 0;
+  aspect-ratio: 3/2;
+  overflow: auto;
+}
+
+/* Main content transitions */
+.prog-in {
+  animation-name: progIn;
+  animation-duration: 1s;
+  transition: all 100ms linear;
+}
+
+@keyframes progIn {
+  from {transform: scale(0.01, 0.01)}
+  to {transform: scale(1, 1)}
+}
+
+/* aside content */
+#author-aside {
+  display: grid;
+  justify-content: center; 
+  grid-template-rows: auto 3fr auto;
+  grid-template-columns: 1fr; 
+  grid-template-areas: 
+    "also"
+    "book-cover"
+    "arrows";
+  width: 100%;
+} 
+  
+#also {
+  grid-area: also; 
+  gap: 0;
+  text-align: center;
+}
+  
+#showingBookCover {
+  object-fit: contain;
+  width: 70%;
+  margin: 0 15%;
+  grid-area: book-cover; 
+}
+  
+#arrows {
+  grid-area: arrows;
+  text-align: center;
+}
+
+#language {
+  padding: 0;
+  margin: 0 auto;
+}
+
+.accordion-arrow {
+  padding: 3px;
+  box-shadow: 3px 3px;
+  text-align: center;
+  margin: 0 auto;
+  background-color: gray;
+  font-weight: bolder;
+  font-size: x-large
+}
+  
+/* footer buttons */  
+.ftrbutton{
+  font-size: 20px;
+  border-radius: 10px;
+  padding: 5px;
+  box-shadow: 3px 3px;
+  text-align: center;
+  margin: auto;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  background-color: aquamarine;
+  font-weight: bold;
+}
+
+/* Modal box/content */
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
+  left: 20%;
+  top: 25%;
+  width: 50%; 
+  height: 50%; 
+  overflow: auto; 
+  background-color: rgb(80, 80, 80); 
+  background-color: rgb(192, 192, 192) 
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; 
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; 
+}
+
+/* Close Buttons */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  cursor: pointer;
+}
+
+/* Generic show/hide class */
+.show {display:block;}
