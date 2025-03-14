@@ -321,6 +321,10 @@ const changeToAuthor = () => {
     currentHat = dropDownAuthor.id;
 }
 
+/* Code I got off chatgpt when I relized midnight last night I can't upload the video file I had to github
+because it's too big */
+// This is essentially an event listener that launches when the Youtube Api I added at the top og the html is loaded.
+//It creates the youtube player to be embedded, and in theory makes it start playing. 
 function onYouTubeIframeAPIReady() {
     ytPlayer = new YT.Player('', {
         playerVars: {
